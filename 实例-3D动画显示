@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D动画显示</title>
+  <style>
+    .cube {
+      width: 200px;
+      height: 200px;
+      perspective: 800px;
+      margin: 100px;
+    }
+ 
+    main {
+      width: 100%;
+      height: 100%;
+      transform: translateZ(-100px);
+      transform-style: preserve-3d;
+      animation: rotate 5s linear infinite;
+    }
+ 
+    @keyframes rotate {
+      from {
+        transform: rotateX(0) rotateY(0);
+      }
+ 
+      to {
+        transform: rotateX(360deg) rotateY(360deg);
+      }
+    }
+ 
+    .cube div {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+    }
+ 
+    .front {
+      background: pink;
+      transform: translateZ(100px);
+    }
+ 
+    .back {
+      background-color: grey;
+      transform: translateZ(-100px);
+    }
+ 
+    .left {
+      background-color: khaki;
+      transform: rotateY(90deg) translateZ(100px);
+    }
+ 
+    .right {
+      background-color: lightblue;
+      transform: rotateY(90deg) translateZ(-100px);
+    }
+ 
+    .top {
+      background-color: lightseagreen;
+      transform: rotateX(90deg) translateZ(-100px);
+    }
+ 
+    .bottom {
+      background-color: lightsalmon;
+      transform: rotateX(90deg) translateZ(100px);
+    }
+  </style>
+</head>
+ 
+<body>
+  <div class="cube">
+    <main>
+      <div class="front"></div>
+      <div class="back"></div>
+      <div class="left"></div>
+      <div class="right"></div>
+      <div class="top"></div>
+      <div class="bottom"></div>
+    </main>
+  </div>
+</body>
+ 
+</html>
