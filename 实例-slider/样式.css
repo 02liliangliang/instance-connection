@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+div{
+    margin: auto;
+    width: 800px;
+    height: 681px;
+    position: relative;
+    overflow: hidden;
+}
+div>img{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    z-index: 0;
+    left: -100%;
+    animation: out 1s;
+}
+ul{
+    position: absolute;
+    top:560px;
+    margin: 0 60px;
+    z-index: 99;
+}
+li{
+    list-style: none;
+    float: left;
+    margin-right: 20px;
+}
+li:last-child{
+    margin: 0;
+}
+li a{
+    display: inline-block;
+    background-color: #000;
+    width: 120px;
+    height: 102px;
+}
+li a img{
+    opacity: 0.8;
+    width: 100%;
+    height:auto;
+}
+li a img:hover{
+    opacity: 1;
+}
+div img:target{
+    left: 0;
+    z-index: 10;
+}
+@keyframes sport1{
+    0%{left: 500px;}
+    100%{left: 0;}
+}
+@keyframes sport2{
+    0%{top:350px}
+    100%{top: 0;}
+}
+@keyframes sport3{
+    0%{transform: scale(0.1,0.1);}
+    100%{transform: scale(1,1);}
+}
+@keyframes sport4{
+    0%{transform: scale(2,2);}
+    100%{transform: scale(1,1);}
+}
+@keyframes sport5{
+    0%{transform: scale(0.1,0.1) rotate(-360deg);}
+    100%{transform: scale(1,1) rotate(0deg);}
+}
+@keyframes out{
+    0%{left:0;}
+    100%{left:0;}
+}
+#img1:target{
+    animation: sport1 0.5s;
+    animation-timing-function:ease-out;
+}
+#img2:target{
+    animation: sport2 0.5s;
+    animation-timing-function:ease-out;
+}
+#img3:target{
+    animation: sport3 1s;
+    animation-timing-function:ease-in;
+}
+#img4:target{
+    animation: sport4 1s;
+    animation-timing-function:ease-out;
+}
+#img5:target{
+    animation: sport5 0.7s;
+    animation-timing-function:ease-in-out;
+}
