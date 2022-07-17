@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>摩尔斯码翻译器</title>
+    <style>
+        body {
+            background-color: #0E0E0E;
+            display: flex;
+            justify-content: center;
+        }
+
+        .panels {
+            width: 900px;
+            height: 500px;
+            color: #8E80BA;
+            text-align: center;
+            background-color: #2E2C30;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: calc(100vh/5);
+        }
+
+        .panels .panel textarea {
+            width: 300px;
+            height: 100px;
+            border: 1px solid #8E80BA;
+            background-color: #2E2C2F;
+            color: #fff;
+        }
+
+        .panel button {
+            margin-top: 10px;
+            width: 60px;
+            height: 30px;
+            border: none;
+        }
+
+        .panel {
+            width: 400px;
+            height: 470px;
+            margin: 0 auto;
+            border: 10px solid #2B292E;
+            background-color: #2E2C30;
+        }
+
+        .panels .panel .purple {
+            background-color: #fff;
+        }
+
+        .panels .panel .yellow {
+            background-color: #9586C2;
+        }
+
+        .panels .panel .white {
+            background-color: #F2AF4B;
+        }
+
+        .panels .symbol {
+            font-size: 30px;
+        }
+
+        .morselist li {
+            width: 100px;
+            text-align: left;
+            line-height: 25px;
+        }
+
+        .playlist {
+            height: 17px;
+            color: #fff;
+            width: 300px;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .morselist {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="panels">
+        <div class="panel">
+            <h3>Morse Code Translation</h3>
+            <h1>摩尔斯码翻译器</h1>
+            <textarea rows="4" placeholder="輸入英文" id="input">HELLO</textarea>
+            <div class="symbol">⇵</div>
+            <textarea rows="4" placeholder="輸入密碼" id="output"></textarea>
+            <div class="playlist" id="playlist"> </div>
+            <div class="buttons">
+                <button class="purple" id="btnMorse">翻译</button>
+                <button class="yellow" id="btnEng">解密</button>
+                <button class="white" id="btnPlay">播放</button>
+            </div>
+        </div>
+        <div class="panel">
+            <h3>摩尔斯码对照表</h3>
+            <hr />
+            <ul class="morselist" id="morselist"></ul>
+        </div>
+
+        <script>
+            //需要用到的摩尔斯加密列表
+            var morseCode = "A;.-|B;-...|C;-.-.|D;-..|E;.|F;..-.|G;--.|H;....|I;..|J;.---|K;-.-|L;.-..|M;--|N;-.|O;---|P;.--.|Q;--.-|R;.-.|S;...|T;-|U;..-|V;...-|W;.--|X;-..-|Y;-.--|Z;--..|/;-..-.|1;.----|2;..---|3;...--|4;....-|5;.....|6;-....|7;--...|8;---..|9;----.|0;-----"
+            morseCodearr = morseCode.split('|')
+            let btnMorse = document.getElementById('btnMorse');
+            let btnEng = document.getElementById('btnEng');
+            let btnPlay = document.getElementById('btnPlay');
+            let outputtxt = document.getElementById('output');
+            let morselist = document.getElementById('morselist');
+            let playlist = document.getElementById('playlist');
+            let morsePwd = '';
+            let inputTxt = '';
+            morseCodearr.forEach(element => {
+                morselist.innerHTML += `<li>${element.split(';')[0]} ${element.split(';')[1]}</li>`
+
+            })
+            //加密
+            btnMorse.onclick = function () {
+                let inputtxt = document.getElementById('input').value;
+                let arr = inputtxt.split('')
+                arr.forEach(element => {
+                    morseCodearr.forEach(code => {
+                        if (element == code.split(';')[0]) {
+                            morsePwd += code.split(';')[1] + ' '
+                        }
+                    })
+                });
+                outputtxt.value = playlist.innerText = morsePwd;
+            }
+            //解密
+            btnEng.onclick = function () {
+                let inputtxt = document.getElementById('input').value;
+                let arr = inputtxt.split(' ')
+                arr.forEach(element => {
+                    morseCodearr.forEach(code => {
+                        if (element == code.split(';')[1]) {
+                            inputTxt += code.split(';')[0]
+                        }
+                    })
+                });
+                outputtxt.value = inputTxt;
+                // console.log(morsePwd)
+            }
+            btnPlay.onclick = function () {
+                var short = new Audio("short.mp3");
+                var long = new Audio("long.mp3");
+                morsePwdarr = morsePwd.split('')
+                let index = 0
+                let timer = setInterval(function () {
+                    index++
+                    if (morsePwdarr[index] == '.') {
+                        short.play();
+                    }
+                    if (morsePwdarr[index] == '-') {
+                        long.play();
+                    }
+                    if (index == morseCodearr.length) {
+                        clearInterval(timer)
+                    }
+                }, 500)
+            }
+
+        </script>
+
+</body>
+
+</html>
