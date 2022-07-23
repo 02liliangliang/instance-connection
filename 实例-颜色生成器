@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>点击按钮更改背景颜色</title>
+		<style>
+			.body{
+				   background-color:#fff;
+			}
+			.change{
+				 background-color:#000;
+			}
+			
+		</style>
+   
+	</head>
+	<body class="body">
+
+		<button>开关按钮</button>
+		<script>
+			var button=document.querySelector("button");
+			var body=document.querySelector(".body");
+			flag=0;
+			button.onclick=function(){
+				if(flag==0){
+					body.className="body change";
+					flag=1;
+				}else{
+					body.className="body";
+					flag=0;
+				}
+				
+			}
+		</script>
+	
+	</body>
+</html>
