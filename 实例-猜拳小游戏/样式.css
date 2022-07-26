@@ -1,0 +1,57 @@
+#top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    /*background-color: skyblue;*/
+}
+
+.desc{
+    /*background-color: palegreen;*/
+    width: 380px;
+    height: 38px;
+    text-align: center;
+    font-size: 28px;
+}
+
+.choose{
+    /*background-color: palevioletred;*/
+    text-align: center;
+    margin-top:20px;
+}
+
+.choose img{
+    width: 85%;
+}
+
+.win{
+    text-align: center;
+}
+
+.win img{
+    margin-top: 20px;
+    height: 120px;
+}
+
+#you, #me {
+    /*background-color: yellow;*/
+    height: 500px;
+    width: 380px;
+}
+
+#bar{
+    display: flex;
+    justify-content: space-around;
+}
+
+#bar button{
+    margin-top: 20px;
+    width: 300px;
+    height: 80px;
+    background-color: yellow;
+
+    font-size: 30px;
+    font-weight: bold;
+    color: rgba(55, 104, 119, 1);
+    border-radius:8%;
+}
