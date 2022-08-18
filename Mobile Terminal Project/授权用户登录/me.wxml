@@ -10,6 +10,7 @@
   </view>
 </view>
 
+
 <navigator url="/pages/label/label" class="navigator1">
 <view>标签</view><image  src="../../images/me-.png" class="me-"></image>
 </navigator>
