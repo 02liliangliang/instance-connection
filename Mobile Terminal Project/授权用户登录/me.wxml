@@ -1,4 +1,4 @@
-<!--pages/me/me.wxml-->
+
 <!-- 获取用户信息 -->
 <view class="container">
   <view> <button type="primary" wx:if="{{!hasUserInfo}}" bindtap="getUserProfile">获取你的昵称和头像</button>
