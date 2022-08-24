@@ -3,8 +3,11 @@
   <textarea name="textarea_content" id="textarea_content" cols="30" rows="5" bindinput="contentChange"placeholder="请输入内容" value="{{content}}"></textarea>
   <button bindtap="commit" class="btn_commit">确定</button>
 </view>
+
+
  <view class="container1">
    <button class="zhaopian">
+   
      <image src="../../images/forwarding.png" ></image>
      <view>转发</view>
    </button>
