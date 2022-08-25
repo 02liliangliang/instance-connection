@@ -1,5 +1,4 @@
 {
-  "comment":"配置window不需要key。直接写属性",
   "usingComponents": {},
   "backgroundTextStyle": "dark",
   "navigationBarBackgroundColor": "#fff",
