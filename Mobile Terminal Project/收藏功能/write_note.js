@@ -1,4 +1,3 @@
-// pages/write_note/write_note.js
 import noteBeanUtil from '../../utils/note_bean.js'
 var app = getApp()
 Page({
