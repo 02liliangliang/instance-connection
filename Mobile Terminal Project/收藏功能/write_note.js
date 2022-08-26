@@ -42,7 +42,6 @@ Page({
     
   },
 
-
   /**
    * 生命周期函数--监听页面加载
    */
@@ -203,5 +202,4 @@ Page({
     // wx.setStorageSync(app.globalData.NOTE_LIST, this.data.noteList)
     wx.setStorage(map)
   },
-
 })
