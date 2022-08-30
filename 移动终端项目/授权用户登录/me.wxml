@@ -2,12 +2,12 @@
 <view class="container">
   <view> <button type="primary" wx:if="{{!hasUserInfo}}" bindtap="getUserProfile">获取你的昵称和头像</button>
   </view>
- 
   <view class="userinfo">
     <image src="{{userInfo.avatarUrl}}" ></image>
     <view class="yonghuming">{{userInfo.nickName}}</view>
   </view>
 </view>
+
 <navigator url="/pages/label/label" class="navigator1">
 <view>标签</view><image  src="../../images/me-.png" class="me-"></image>
 </navigator>
