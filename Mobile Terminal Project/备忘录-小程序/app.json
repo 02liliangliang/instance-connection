@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/main/main",
+    "pages/search/search",
+    "pages/me/me",
+    "pages/write_note/write_note",
+    "pages/shoucang/shoucang",
+    "pages/biaoqian/biaoqian",
+    "pages/zuijinshanchu/zuijinshanchu",
+    "pages/shiyong/shiyong",
+    "pages/biaoqian_add/biaoqian_add"
+  ],
+  "tabBar": {
+    "list": [{
+      "pagePath": "pages/main/main",
+      "text": "首页",
+      "iconPath": "/images/home.png",
+      "selectedIconPath": "/images/home-active.png"
+    },{
+      "pagePath": "pages/search/search",
+      "text": "搜索",
+      "iconPath": "/images/search.png",
+      "selectedIconPath": "/images/search-active.png"
+    },{
+      "pagePath": "pages/me/me",
+      "text": "我",
+      "iconPath": "/images/me.png",
+      "selectedIconPath": "/images/me-active.png"
+    }
+  ]
+  },
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "备忘录",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true,
+    "backgroundColor": "#c1c1c1"
+    
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

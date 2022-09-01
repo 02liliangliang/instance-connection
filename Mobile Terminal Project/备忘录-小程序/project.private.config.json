@@ -1,0 +1,34 @@
+{
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/write_note/write_note",
+          "pathName": "pages/write_note/write_note",
+          "query": "1=1",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/main/main",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "",
+          "pathName": "pages/biaoqian/biaoqian",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        }
+      ]
+    }
+  },
+  "description": "",
+  "projectname": "备忘录",
+  "setting": {
+    "compileHotReLoad": false
+  },
+  "libVersion": "2.25.2"
+}

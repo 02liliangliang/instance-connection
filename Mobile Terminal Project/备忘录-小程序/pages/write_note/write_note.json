@@ -1,0 +1,10 @@
+{
+  "comment":"",
+  "usingComponents": {},
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#FFD700",
+  "navigationBarTitleText": "新增",
+  "navigationBarTextStyle": "black",
+  "enablePullDownRefresh": false,
+  "backgroundColor": "#c1c1c1"
+}

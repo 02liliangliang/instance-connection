@@ -1,0 +1,11 @@
+<!--pages/biaoqian/biaoqian.wxml-->
+<view wx:for="{{cota}}" wx:key="{{index}}">
+<view class="navigator1">
+<view>{{item}}</view><image  src="../../images/me-.png" class="me-"></image>
+</view>
+</view>
+<view class="biaoqian">
+  <button type="primary" size="default" bindtap="biaoqian_add">添加标签</button>
+  <button class="bianji_BQ" size="default" >编辑标签</button>
+</view>
+ 

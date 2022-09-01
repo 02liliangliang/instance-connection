@@ -1,0 +1,46 @@
+<wxs module="time" src="../../utils/time_utils.wxs"></wxs>
+<view class="container">
+  <view class="view_line"></view>
+  <view class="search_container">
+    <input class="search_input" bindinput="search_change" type="text" placeholder="搜索备忘" />
+    <image src="../../images/search_search.png" class="image_search"></image>
+  </view>
+  <view class="view_menu">
+    <image class="image_menu" src="../../images/icon_menu.png" bindtap="switchLayout" />
+    <view class="view_orderby">
+      <text class="text_orderby" bindtap="orderBy">{{orderbyItemList[orderbyIndex]}}</text>
+      <image src="../../images/icon_down_arrow.png" class="image_orderby"></image>
+    </view>
+  </view>
+  <view style="margin-top: 10rpx;margin-left: 5%;margin-right: 5%;width: 90%;background-color: var(--color_grey_dd);height: 1rpx;">
+  </view>
+  <view wx:if="{{isListView==true}}" style="width: 100%;padding-bottom: 80rpx;flex: 1;">
+    <view style="width:90%;margin-left:5%;margin-right: 5%;margin-top: 20rpx;height: auto;" wx:for="{{list}}" wx:key="note_id"
+      bindtap="showAction" data-item="{{item}}" data-index="{{index}}">
+      <view class="view_note">
+        <text class="text_title">{{item.title}}</text>
+        <view style="width: 100%;display: flex;flex-direction: row;margin-top: 10rpx;">
+          <text class="text_time">{{orderbyIndex==1?time.getTime(item.add_time):time.getTime(item.update_time)}}</text>
+          <text class="text_content">{{item.content}}</text>
+        </view>
+        <view class="view_line" style="margin-top: 10rpx;"></view>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{isListView==false}}" style="width: 100%;padding-bottom: 80rpx;flex: 1;">
+    <view style="width:90%;margin-left:5%;margin-right: 5%;margin-top: 20rpx;height: auto;" wx:for="{{list}}" wx:key="note_id"
+      bindtap="showAction" data-item="{{item}}" data-index="{{index}}">
+      <view class="view_note_grid">
+        <text class="text_title_grid">{{item.title}}</text>
+        <text class="text_content_grid">{{item.content}}</text>
+        <text
+          class="text_time_grid">{{orderbyIndex==1?time.getTime(item.add_time):time.getTime(item.update_time)}}</text>
+      </view>
+    </view>
+  </view>
+<!-- 添加符号 -->
+    <button bindtap="gotoWriteNote" class="home-add">
+      <image src="../../images/home-add.png" ></image>
+      <view>新建</view>
+    </button>
+</view>

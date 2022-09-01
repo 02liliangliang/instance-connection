@@ -1,0 +1,22 @@
+/* pages/biaoqian/biaoqian.wxss */
+.biaoqian{
+  display:flex;
+  justify-content:space-around;
+  position: absolute;
+  top:90%;
+}
+.bianji_BQ{
+  background-color: salmon;
+}
+.me-{
+  width: 10px;
+  height: 10px;
+}
+.navigator1{
+  padding:10px 0 10px 5px;
+  margin: 10px 10px 10px 5px ;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  border-bottom:1px solid rgb(187, 187, 190) ;
+}

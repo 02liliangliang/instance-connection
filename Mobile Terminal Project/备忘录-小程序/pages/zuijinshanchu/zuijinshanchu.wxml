@@ -1,0 +1,16 @@
+<!--pages/zuijinshanchu/zuijinshanchu.wxml-->
+<text>pages/zuijinshanchu/zuijinshanchu.wxml</text>
+
+<view class="content_body">
+  <view class="content_time">
+    <text class="redact_day">16</text>
+    <text class="redact_month">08月</text>
+  </view>
+  <view class="content_main">
+    <view class="content_title">{{item.title}}</view>
+    <view  class="content_state">
+      <view>{{item.time}}</view>
+      <view>编辑</view>
+    </view>
+  </view>
+</view>

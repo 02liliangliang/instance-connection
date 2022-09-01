@@ -1,0 +1,24 @@
+<!--pages/me/me.wxml-->
+<!-- 获取用户信息 -->
+<view class="container">
+  <view> <button type="primary" wx:if="{{!hasUserInfo}}" bindtap="getUserProfile">获取你的昵称和头像</button>
+  </view>
+ 
+  <view class="userinfo">
+    <image src="{{userInfo.avatarUrl}}" ></image>
+    <view class="yonghuming">{{userInfo.nickName}}</view>
+  </view>
+</view>
+
+<navigator url="/pages/biaoqian/biaoqian" class="navigator1">
+<view>标签</view><image  src="../../images/me-.png" class="me-"></image>
+</navigator>
+<navigator url="/pages/shoucang/shoucang" class="navigator1">
+<view>收藏</view><image  src="../../images/me-.png" class="me-"></image>
+</navigator>
+<navigator url="/pages/zuijinshanchu/zuijinshanchu" class="navigator1">
+<view>最近删除</view><image  src="../../images/me-.png" class="me-"></image>
+</navigator>
+<navigator url="/pages/shiyong/shiyong" class="navigator1">
+<view>使用帮助</view><image  src="../../images/me-.png" class="me-"></image>
+</navigator>
