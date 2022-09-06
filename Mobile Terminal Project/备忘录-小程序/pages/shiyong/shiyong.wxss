@@ -1,0 +1,7 @@
+/* pages/shiyong/shiyong.wxss */
+.content{
+  font-size: larger;
+  font-weight: 600;
+  
+
+}
