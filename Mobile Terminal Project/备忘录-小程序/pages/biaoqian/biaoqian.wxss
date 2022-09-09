@@ -8,10 +8,12 @@
 .bianji_BQ{
   background-color: salmon;
 }
+
 .me-{
   width: 10px;
   height: 10px;
 }
+
 .navigator1{
   padding:10px 0 10px 5px;
   margin: 10px 10px 10px 5px ;
