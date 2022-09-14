@@ -51,6 +51,7 @@ function strToJson(str) {
   var json = JSON.parse(str);
   return json;
 }
+
  module.exports = {
   formatTime: formatTime,
   formatDate: formatDate,
