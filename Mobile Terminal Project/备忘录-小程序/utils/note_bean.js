@@ -8,6 +8,7 @@ function getNoteBean(note_id,title,content,add_time,update_time,note_code) {
     update_time: update_time,
     note_code:note_code,
   }
+  
   return note;
 }
 module.exports = {
