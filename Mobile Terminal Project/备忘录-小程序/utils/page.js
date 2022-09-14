@@ -2,12 +2,7 @@ var page={
   mainPage:"../main/main",
   writePage:"../write_note/write_note"
 }
-/**
- * 
- * @param {页面地址} url 
- * @param {参数} param 
- * @param {1 nativeTo 2 redirectTo 3 switchTab} startType 
- */
+
 function startPage(url, param, startType) {
   if (param == {}||param==null) {
     if (startType == 1) {
@@ -26,9 +21,6 @@ function startPage(url, param, startType) {
   } else {
     let paramStr = '?'
 
-    // for (let index = 0; index < param.length; index++) {
-    //   paramStr = "&" + paramStr + Object.keys(param)[index] + "=" + param[index]
-    // }
     for (var key in param) {
       if (paramStr.length!=1) {
         paramStr+="&"
