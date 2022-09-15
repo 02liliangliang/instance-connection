@@ -1,5 +1,4 @@
 /* pages/me/me.wxss */
-/* pages/me/me.wxss */
 .me-{
   width: 10px;
   height: 10px;
@@ -19,7 +18,6 @@
   align-items: center;
   justify-content: center;
 }
-
 .container{
   background-color:#FFD700;
   height: 150rpx;
@@ -38,6 +36,5 @@
   color: white;
   position:absolute;
   top: 230rpx;
-
 }
 
