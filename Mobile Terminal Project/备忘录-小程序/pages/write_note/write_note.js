@@ -2,10 +2,6 @@
 import noteBeanUtil from '../../utils/note_bean.js'
 var app = getApp()
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
     title: "",
     content: "",
