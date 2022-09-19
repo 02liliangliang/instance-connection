@@ -4,7 +4,6 @@
     "ignore": [],
     "include": []
   },
-  
   "setting": {
     "urlCheck": false,
     "es6": true,
@@ -35,7 +34,6 @@
     "useApiHook": true,
     "useApiHostProcess": true
   },
-  
   "compileType": "miniprogram",
   "libVersion": "2.18.0",
   "appid": "wx86eb414ebde5c02b",
