@@ -1,4 +1,3 @@
 <!--pages/biaoqian_add/biaoqian_add.wxml-->
-
 <input type="text" placeholder="输入标签名称..."  name="content"class="input_add" bindinput="input_add"value="{{content}}"></input>
 <button bindtap="goSave" type="primary">保存</button>
