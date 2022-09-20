@@ -1,14 +1,11 @@
 // pages/biaoqian_add/biaoqian_add.js
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
     content:[],
     content1:'',
-
-
   },
   input_add(e){
     // console.log(e.detail.value);
