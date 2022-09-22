@@ -1,7 +1,6 @@
 // pages/main/main.js
 var app = getApp()
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -12,7 +11,6 @@ Page({
     isListView: true,
     keyWord:""
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
