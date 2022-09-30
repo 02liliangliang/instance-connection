@@ -1,5 +1,4 @@
 /* pages/biaoqian_add/biaoqian_add.wxss */
-
 .input_add{
   background-color: rgb(245, 241, 241);
   width: 100%;
