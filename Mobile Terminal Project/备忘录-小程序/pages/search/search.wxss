@@ -12,7 +12,6 @@
   border-radius: 10rpx;
   padding: 10rpx;
   font-size: 30rpx;
-  
 }
 .search_container {
   display: flex;
