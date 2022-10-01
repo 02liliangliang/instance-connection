@@ -1,5 +1,4 @@
 <!--pages/search/search.wxml-->
-
 <view class="search_container" bindtap="input_tiao">
     <input class="search_input" bindinput="search_change" type="text" placeholder="搜索备忘" />
     <image src="../../images/search_search.png" class="image_search"></image>
