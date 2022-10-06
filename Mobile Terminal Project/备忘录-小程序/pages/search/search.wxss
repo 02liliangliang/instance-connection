@@ -1,4 +1,5 @@
 /* pages/search/search.wxss */
+
 .search_input {
   border-radius:150rpx;
   background-color: var(--color_grey_dd);
