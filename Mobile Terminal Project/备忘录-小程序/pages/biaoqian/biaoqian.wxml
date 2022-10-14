@@ -1,5 +1,4 @@
 <!--pages/biaoqian/biaoqian.wxml-->
-
 <view wx:for="{{cota}}" wx:key="{{index}}">
 <view class="navigator1">
 <view>{{item}}</view><image  src="../../images/me-.png" class="me-"></image>
