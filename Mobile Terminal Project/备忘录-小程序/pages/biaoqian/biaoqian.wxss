@@ -1,5 +1,4 @@
 /* pages/biaoqian/biaoqian.wxss */
-
 .biaoqian{
   display:flex;
   justify-content:space-around;
