@@ -1,5 +1,4 @@
 /* pages/zuijinshanchu/zuijinshanchu.wxss */
-
 .content_body{
   margin: 5rpx;
   background: #faf9f6;
